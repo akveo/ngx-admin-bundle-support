@@ -23,8 +23,8 @@ export class UsersApi {
 
   list(pageNumber: number = 1, pageSize: number = 10): Observable<any[]> {
     const params = new HttpParams()
-      .set('pageNumber', `${pageNumber}`)
-      .set('pageSize', `${pageSize}`);
+      .set('pageNumber', pageNumber)
+      .set('pageSize', pageSize);
 
     return this.api.get(this.apiController, { params })
       .pipe(map(data => data.map(item => {

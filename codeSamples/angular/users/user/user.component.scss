@@ -1,0 +1,14 @@
+/*!
+ * Copyright (c) Akveo 2019. All Rights Reserved.
+ * Licensed under the Personal / Commercial License.
+ * See LICENSE_PERSONAL / LICENSE_COMMERCIAL in the project root for license information on type of purchased license.
+ */
+
+ @import '~@nebular/theme/styles/core/mixins';
+
+:host {
+  button {
+    @include nb-ltr(margin, 0 0.75rem 0 0);
+    @include nb-rtl(margin, 0 0 0 0.75rem);
+  }
+}

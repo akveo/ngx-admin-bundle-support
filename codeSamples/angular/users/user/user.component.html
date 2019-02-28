@@ -1,0 +1,65 @@
+<!--
+  ~ Copyright (c) Akveo 2019. All Rights Reserved.
+  ~ Licensed under the Personal / Commercial License.
+  ~ See LICENSE_PERSONAL / LICENSE_COMMERCIAL in the project root for license information on type of purchased license.
+  -->
+
+<nb-card>
+  <nb-card-header>{{mode}} user</nb-card-header>
+  <nb-card-body>
+    <div class="row">
+      <div class="col-sm-6">
+        <div class="form-group">
+          <label for="firstName">First Name</label>
+          <input [disabled]="!canEdit" [(ngModel)]="user.firstName" type="text" class="form-control" id="firstName" placeholder="First Name">
+        </div>
+      </div>
+      <div class="col-sm-6">
+        <div class="form-group">
+          <label for="lastName">Last Name</label>
+          <input [disabled]="!canEdit" [(ngModel)]="user.lastName" type="text" class="form-control" id="lastName" placeholder="Last Name">
+        </div>
+      </div>
+      <div class="col-sm-6">
+        <div class="form-group">
+          <label for="inputLogin">Login</label>
+          <input [disabled]="!canEdit" [(ngModel)]="user.userName" type="text" class="form-control" id="inputLogin" placeholder="Login">
+        </div>
+      </div>
+      <div class="col-sm-6">
+        <div class="form-group">
+          <label for="inputAge">Age</label>
+          <input [disabled]="!canEdit" [(ngModel)]="user.age" type="text" class="form-control" id="inputAge" placeholder="Age">
+        </div>
+      </div>
+      <div class="col-sm-6">
+        <div class="form-group">
+          <label for="inputEmail">Email</label>
+          <input [disabled]="!canEdit" [(ngModel)]="user.email" type="email" class="form-control" id="inputEmail" placeholder="Email">
+        </div>
+      </div>
+      <div class="col-sm-6">
+        <div class="form-group">
+          <label for="inputStreet">Street</label>
+          <input [disabled]="!canEdit" [(ngModel)]="user.address.street" type="text" class="form-control" id="inputStreet" placeholder="Street">
+        </div>
+      </div>
+      <div class="col-sm-6">
+        <div class="form-group">
+          <label for="inputCity">City</label>
+          <input [disabled]="!canEdit" [(ngModel)]="user.address.city" type="text" class="form-control" id="inputCity" placeholder="City">
+        </div>
+      </div>
+      <div class="col-sm-6">
+        <div class="form-group">
+          <label for="inputZipCode">Zip Code</label>
+          <input [disabled]="!canEdit" [(ngModel)]="user.address.zipCode" type="text" class="form-control" id="inputZipCode" placeholder="Zip Code">
+        </div>
+      </div>
+    </div>
+  </nb-card-body>
+  <nb-card-footer>
+    <button type="submit" (click)="save()" class="btn btn-primary">Submit</button>
+    <button type="submit" (click)="back()" class="btn btn-primary">Back</button>
+  </nb-card-footer>
+</nb-card>
